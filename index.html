@@ -12,13 +12,19 @@
     return result;
 }
 
-  var host = "http://devx.rf.gd";
+  var host = "http://devx.rf.gd/";
   
+  if (getp("p")==""){
+      
   if (getp("a")==""){
-  location.href = host + "/qc.html" + location.search;  
+  location.href = host + "qc.html" + location.search;  
   } else {
-  location.href = host + "/ob.html" + location.search; 
+  location.href = host + "ob.html" + location.search; 
   }
+  
+  } else {
+  location.href = host + getp("p");  
+   }
   
   </script>
 </head>
