@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>location.href = "http:localhost/qc.php" + location.search;</script>
+<script>
+  function getp(pn) {
+    var result = "", tmp = [];
+    var items = location.search.substr(1).split("&");
+    for (var index = 0; index < items.length; index++) {
+        tmp = items[index].split("=");
+        if (tmp[0] === pn) result = decodeURIComponent(tmp[1]);
+    }
+    return result;
+}
+
+  var host = "http://devx.rf.gd";
+  
+  if (getp("a")==""){
+  location.href = host + "/qc.html" + location.search;  
+  } else {
+  location.href = host + "/ob.html" + location.search; 
+  }
+  
+  </script>
 </head>
 </html>
