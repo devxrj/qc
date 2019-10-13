@@ -12,7 +12,7 @@
     return result;
 }
 
-  var host = "http://devx.rf.gd/";
+  var host = (getp("s") == "0" ? "http" : "https") + "://devx.rf.gd/";
   
   if (getp("p")==""){
       
